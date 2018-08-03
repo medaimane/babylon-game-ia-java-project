@@ -1,0 +1,197 @@
+@startuml
+abstract class models.Move
+abstract class models.Position
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class algorithms.Babylon
+class algorithms.BabylonMinMaxPosition
+class algorithms.BabylonMove
+class algorithms.GameJFrameMinMax
+class algorithms.GameSearchMinMax
+class interfaces.AboutGameFrame
+class interfaces.HistoryFrame
+class interfaces.LoadGameFrame
+class interfaces.NewGameFrame
+class interfaces.StartGameFrame
+class java.awt.Color
+class java.awt.Container
+class java.awt.EventQueue
+class java.awt.Font
+class java.awt.GridLayout
+class java.awt.event.ActionEvent
+class java.awt.event.ActionListener
+class java.awt.event.KeyAdapter
+class java.awt.event.KeyEvent
+class java.awt.event.MouseAdapter
+class java.awt.event.MouseEvent
+class java.io.File
+class java.io.FileInputStream
+class java.io.FileNotFoundException
+class java.io.FileOutputStream
+class java.io.IOException
+class java.io.ObjectInputStream
+class java.io.ObjectOutputStream
+class java.util.ArrayList
+class java.util.List
+class java.util.Random
+class javax.swing.BorderFactory
+class javax.swing.DefaultComboBoxModel
+class javax.swing.JButton
+class javax.swing.JComboBox
+class javax.swing.JFrame
+class javax.swing.JLabel
+class javax.swing.JOptionPane
+class javax.swing.JPanel
+class javax.swing.SwingConstants
+class javax.swing.border.EmptyBorder
+class javax.swing.table.DefaultTableModel
+class main.Main
+class main.WelcomeFrame
+class models.Brique
+class models.Color
+class models.Location
+class models.Pic
+class serialize.Identify
+class serialize.SaveAndLoad
+class serialize.Session
+interface java.io.Serializable
+interface java.lang.Cloneable
+algorithms.BabylonMinMaxPosition ..> models.Move
+algorithms.BabylonMinMaxPosition --|> models.Position
+algorithms.BabylonMinMaxPosition ..> java.lang.Override
+algorithms.BabylonMinMaxPosition ..> java.util.ArrayList
+algorithms.BabylonMinMaxPosition ..> java.util.List
+algorithms.BabylonMinMaxPosition ..> models.Brique
+algorithms.BabylonMinMaxPosition ..> models.Color
+algorithms.BabylonMinMaxPosition ..> models.Location
+algorithms.BabylonMinMaxPosition --|> java.io.Serializable
+algorithms.BabylonMove --|> models.Move
+algorithms.BabylonMove ..> java.lang.Override
+algorithms.BabylonMove ..> models.Brique
+algorithms.BabylonMove ..> models.Location
+algorithms.GameJFrameMinMax ..> models.Position
+algorithms.GameJFrameMinMax ..> java.lang.Override
+algorithms.GameJFrameMinMax ..> java.lang.SuppressWarnings
+algorithms.GameJFrameMinMax ..> java.awt.Container
+algorithms.GameJFrameMinMax ..> java.awt.GridLayout
+algorithms.GameJFrameMinMax ..> java.awt.event.KeyAdapter
+algorithms.GameJFrameMinMax ..> java.awt.event.KeyEvent
+algorithms.GameJFrameMinMax ..> java.awt.event.MouseAdapter
+algorithms.GameJFrameMinMax ..> java.awt.event.MouseEvent
+algorithms.GameJFrameMinMax --|> javax.swing.JFrame
+algorithms.GameJFrameMinMax ..> javax.swing.JOptionPane
+algorithms.GameJFrameMinMax ..> main.Main
+algorithms.GameJFrameMinMax ..> models.Brique
+algorithms.GameJFrameMinMax ..> models.Color
+algorithms.GameJFrameMinMax ..> models.Location
+algorithms.GameJFrameMinMax ..> models.Pic
+algorithms.GameJFrameMinMax ..> serialize.SaveAndLoad
+algorithms.GameJFrameMinMax ..> serialize.Session
+algorithms.GameSearchMinMax ..> models.Move
+algorithms.GameSearchMinMax ..> java.util.List
+algorithms.GameSearchMinMax ..> java.util.Random
+algorithms.GameSearchMinMax ..> javax.swing.JOptionPane
+algorithms.GameSearchMinMax ..> main.Main
+algorithms.GameSearchMinMax ..> models.Brique
+interfaces.AboutGameFrame ..> java.lang.Override
+interfaces.AboutGameFrame ..> java.lang.SuppressWarnings
+interfaces.AboutGameFrame --|> javax.swing.JFrame
+interfaces.AboutGameFrame ..> javax.swing.JOptionPane
+interfaces.AboutGameFrame ..> main.WelcomeFrame
+interfaces.HistoryFrame ..> java.lang.Override
+interfaces.HistoryFrame ..> java.lang.SuppressWarnings
+interfaces.HistoryFrame ..> java.io.File
+interfaces.HistoryFrame ..> java.io.FileInputStream
+interfaces.HistoryFrame ..> java.io.FileNotFoundException
+interfaces.HistoryFrame ..> java.io.IOException
+interfaces.HistoryFrame ..> java.io.ObjectInputStream
+interfaces.HistoryFrame --|> javax.swing.JFrame
+interfaces.HistoryFrame ..> javax.swing.JOptionPane
+interfaces.HistoryFrame ..> javax.swing.table.DefaultTableModel
+interfaces.HistoryFrame ..> main.WelcomeFrame
+interfaces.HistoryFrame ..> serialize.Identify
+interfaces.LoadGameFrame ..> java.lang.SuppressWarnings
+interfaces.LoadGameFrame ..> algorithms.GameJFrameMinMax
+interfaces.LoadGameFrame ..> java.io.File
+interfaces.LoadGameFrame ..> java.io.FileInputStream
+interfaces.LoadGameFrame ..> java.io.FileNotFoundException
+interfaces.LoadGameFrame ..> java.io.IOException
+interfaces.LoadGameFrame ..> java.io.ObjectInputStream
+interfaces.LoadGameFrame --|> javax.swing.JFrame
+interfaces.LoadGameFrame ..> javax.swing.JOptionPane
+interfaces.LoadGameFrame ..> javax.swing.table.DefaultTableModel
+interfaces.LoadGameFrame ..> serialize.Identify
+interfaces.LoadGameFrame ..> serialize.Session
+interfaces.NewGameFrame ..> java.lang.SuppressWarnings
+interfaces.NewGameFrame ..> algorithms.GameJFrameMinMax
+interfaces.NewGameFrame ..> java.io.IOException
+interfaces.NewGameFrame --|> javax.swing.JFrame
+interfaces.NewGameFrame ..> javax.swing.JOptionPane
+interfaces.NewGameFrame ..> serialize.Identify
+interfaces.NewGameFrame ..> serialize.Session
+interfaces.StartGameFrame ..> java.lang.Override
+interfaces.StartGameFrame ..> java.lang.SuppressWarnings
+interfaces.StartGameFrame --|> javax.swing.JFrame
+interfaces.StartGameFrame ..> javax.swing.JOptionPane
+interfaces.StartGameFrame ..> main.WelcomeFrame
+main.Main ..> models.Position
+main.Main ..> java.lang.Override
+main.Main ..> algorithms.GameJFrameMinMax
+main.Main ..> java.awt.Color
+main.Main ..> java.awt.EventQueue
+main.Main ..> java.awt.Font
+main.Main ..> java.awt.event.ActionEvent
+main.Main ..> java.awt.event.ActionListener
+main.Main ..> java.io.File
+main.Main ..> java.io.FileInputStream
+main.Main ..> java.io.FileNotFoundException
+main.Main ..> java.io.IOException
+main.Main ..> java.io.ObjectInputStream
+main.Main ..> javax.swing.DefaultComboBoxModel
+main.Main ..> javax.swing.JButton
+main.Main ..> javax.swing.JComboBox
+main.Main --|> javax.swing.JFrame
+main.Main ..> javax.swing.JLabel
+main.Main ..> javax.swing.JOptionPane
+main.Main ..> javax.swing.JPanel
+main.Main ..> javax.swing.SwingConstants
+main.Main ..> javax.swing.border.EmptyBorder
+main.Main ..> serialize.SaveAndLoad
+main.WelcomeFrame ..> java.lang.SuppressWarnings
+main.WelcomeFrame ..> interfaces.AboutGameFrame
+main.WelcomeFrame ..> interfaces.HistoryFrame
+main.WelcomeFrame ..> interfaces.StartGameFrame
+main.WelcomeFrame --|> javax.swing.JFrame
+main.WelcomeFrame ..> javax.swing.JOptionPane
+models.Brique ..> java.lang.Override
+models.Brique --|> java.io.Serializable
+models.Brique --|> java.lang.Cloneable
+models.Color ..> java.lang.Override
+models.Color --|> java.io.Serializable
+models.Location ..> java.lang.Override
+models.Location --|> java.io.Serializable
+models.Location --|> java.lang.Cloneable
+models.Pic ..> java.lang.Override
+models.Pic ..> javax.swing.BorderFactory
+models.Pic --|> javax.swing.JButton
+serialize.Identify ..> models.Position
+serialize.Identify ..> java.lang.Override
+serialize.Identify --|> java.io.Serializable
+serialize.SaveAndLoad ..> models.Position
+serialize.SaveAndLoad ..> algorithms.Babylon
+serialize.SaveAndLoad ..> algorithms.BabylonMinMaxPosition
+serialize.SaveAndLoad ..> algorithms.GameJFrameMinMax
+serialize.SaveAndLoad ..> algorithms.GameSearchMinMax
+serialize.SaveAndLoad ..> java.io.FileNotFoundException
+serialize.SaveAndLoad ..> java.io.FileOutputStream
+serialize.SaveAndLoad ..> java.io.IOException
+serialize.SaveAndLoad ..> java.io.ObjectOutputStream
+serialize.SaveAndLoad ..> main.Main
+serialize.Session ..> algorithms.Babylon
+serialize.Session ..> algorithms.BabylonMinMaxPosition
+serialize.Session ..> algorithms.GameSearchMinMax
+serialize.Session ..> java.io.FileNotFoundException
+serialize.Session ..> java.io.FileOutputStream
+serialize.Session ..> java.io.IOException
+serialize.Session ..> java.io.ObjectOutputStream
+@enduml
